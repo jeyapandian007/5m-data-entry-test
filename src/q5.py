@@ -5,6 +5,11 @@ def check_divisibility(num, divisor):
     - Both num and divisor must be numeric.
     - Return True if num is divisible by divisor, False otherwise.
     """
+
+    if((type(num)==int and type(divisor)==int) and  divisor!=0):
+        return (num % divisor == 0)
+    else:
+        print("Invalid input")
     return
 
 
@@ -12,3 +17,6 @@ def check_divisibility(num, divisor):
 # Invoke the function "check_divisibility" using the following scenarios:
 # - 10, 2
 # - 7, 3
+print(check_divisibility(10,2))
+print(check_divisibility(7,3))
+print(check_divisibility(7,0))
